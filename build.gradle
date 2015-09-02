@@ -1,0 +1,25 @@
+group 'org.gpie3k'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'groovy'
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+   mavenCentral()
+}
+
+dependencies {
+   compile 'org.codehaus.groovy:groovy-all:2.3.11'
+   compile 'junit:junit:4.11'
+   compile 'org.slf4j:slf4j-api:1.7.+'
+   compile 'ch.qos.logback:logback-classic:1.+'
+   compile 'org.projectlombok:lombok:1.16.2'
+
+   testCompile 'org.spockframework:spock-core:1.0-groovy-2.3'
+}
+
+task wrapper(type: Wrapper) {
+   gradleVersion = '2.3'
+}
